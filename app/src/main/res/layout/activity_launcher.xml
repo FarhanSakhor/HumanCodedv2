@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="@string/app_name" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F01 Notes" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_rich_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F02 Rich text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_attachments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F03 Attachments" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F04 Search" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_organize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F05 Organize" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F06 State" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reminders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F07 Reminders" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_backup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F08 Backup" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F09 Settings" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="F10 Sync" />
+    </LinearLayout>
+</ScrollView>
