@@ -6,7 +6,11 @@ import android.content.Intent
 import android.net.Uri
 
 object Logic {
-    fun init(appContext: Context) {}
+    lateinit var appContext: Context
+        private set
+    fun init(appContext: Context) {
+        this.appContext = appContext.applicationContext
+    }
 
     val notes: NotesRepository = NotesRepositoryStub()
     val richText: RichTextEngine = RichTextEngineStub()
