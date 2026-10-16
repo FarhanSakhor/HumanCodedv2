@@ -6,8 +6,11 @@ import android.content.Intent
 import android.net.Uri
 
 object Logic {
-    fun init(appContext: Context) {}
-
+    lateinit var appContext: Context
+        private set
+    fun init(appContext: Context) {
+        this.appContext = appContext.applicationContext
+    }
     val notes: NotesRepository = NotesRepositoryStub()
     val richText: RichTextEngine = RichTextEngineStub()
     val attachments: AttachmentManager = AttachmentManagerStub()
@@ -72,7 +75,6 @@ class ReminderSchedulerStub : ReminderScheduler {
 class NotesBackupStub : NotesBackup {
     override fun onTrimMemory(level: Int) {}
     override fun exportAll(target: Uri, format: ExportFormat): ExportResult = ExportResult(false, 0, "")
-    override fun importBackup(source: Uri): Int = 0
 }
 
 class SettingsStoreStub : SettingsStore {

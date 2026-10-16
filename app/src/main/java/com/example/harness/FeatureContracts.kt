@@ -88,8 +88,6 @@ interface ReminderScheduler : MemoryAware {
 interface NotesBackup : MemoryAware {
     /** Exports notes to the selected destination using the requested format. */
     fun exportAll(target: Uri, format: ExportFormat): ExportResult
-
-    /** Imports notes from the selected backup source and returns the imported item count. */
 }
 
 interface SettingsStore : MemoryAware {

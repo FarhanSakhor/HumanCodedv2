@@ -371,7 +371,6 @@ class BackupActivity : FeatureActivity() {
         get() = Logic.backup
 
     private lateinit var exportPicker: ActivityResultLauncher<android.content.Intent>
-    private lateinit var importPicker: ActivityResultLauncher<Array<String>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -390,7 +389,7 @@ class BackupActivity : FeatureActivity() {
         }
         configureScreen(
             "F08 Backup",
-            listOf("Export", "Import"),
+            listOf("Export"),
             spinnerOptions = ExportFormat.entries.map { it.name },
             showResults = false
         )
@@ -413,7 +412,6 @@ class BackupActivity : FeatureActivity() {
             }
             exportPicker.launch(intent)
         }
-        actionButton(2).setOnClickListener { importPicker.launch(arrayOf("*/*")) }
     }
 }
 
