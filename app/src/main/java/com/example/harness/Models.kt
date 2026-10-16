@@ -55,7 +55,6 @@ enum class TextStyleType {
 enum class ExportFormat {
     JSON,
     TXT,
-    PDF,
     HTML
 }
 

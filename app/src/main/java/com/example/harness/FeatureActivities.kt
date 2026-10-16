@@ -388,13 +388,6 @@ class BackupActivity : FeatureActivity() {
                 }
             }
         }
-        importPicker = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-            if (uri != null) {
-                runFeatureCall({ Logic.backup.importBackup(uri) }) {
-                    showStatus("items: $it")
-                }
-            }
-        }
         configureScreen(
             "F08 Backup",
             listOf("Export", "Import"),
@@ -406,13 +399,11 @@ class BackupActivity : FeatureActivity() {
             val mimeType = when (format) {
                 ExportFormat.JSON -> "application/json"
                 ExportFormat.TXT -> "text/plain"
-                ExportFormat.PDF -> "application/pdf"
                 ExportFormat.HTML -> "text/html"
             }
             val extension = when (format) {
                 ExportFormat.JSON -> "json"
                 ExportFormat.TXT -> "txt"
-                ExportFormat.PDF -> "pdf"
                 ExportFormat.HTML -> "html"
             }
             val intent = android.content.Intent(android.content.Intent.ACTION_CREATE_DOCUMENT).apply {

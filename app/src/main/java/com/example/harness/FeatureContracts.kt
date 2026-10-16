@@ -90,7 +90,6 @@ interface NotesBackup : MemoryAware {
     fun exportAll(target: Uri, format: ExportFormat): ExportResult
 
     /** Imports notes from the selected backup source and returns the imported item count. */
-    fun importBackup(source: Uri): Int
 }
 
 interface SettingsStore : MemoryAware {

@@ -74,15 +74,21 @@ class ReminderSchedulerStub : ReminderScheduler {
 }
 
 class NotesBackupStub : NotesBackup {
-    override fun onTrimMemory(level: Int) {}
-    override fun exportAll(target: Uri, format: ExportFormat): ExportResult = ExportResult(false, 0, "")
-    override fun importBackup(source: Uri): Int = 0
+    override fun onTrimMemory(level: Int) {
+
+    }
+    override fun exportAll(target: Uri,
+                           format: ExportFormat): ExportResult = ExportResult(false,
+        0, "")
 }
 
 class SettingsStoreStub : SettingsStore {
     override fun onTrimMemory(level: Int) {}
-    override fun load(): AppSettings = AppSettings(16, ThemeMode.SYSTEM, false, SortOrder.NEWEST)
-    override fun save(settings: AppSettings) {}
+    override fun load(): AppSettings = AppSettings(16,
+        ThemeMode.SYSTEM, false, SortOrder.NEWEST)
+    override fun save(settings: AppSettings) {
+
+    }
 }
 
 class SyncClientStub : SyncClient {
